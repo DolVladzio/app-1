@@ -1,4 +1,4 @@
-name: Build App-1
+name: Build App-3
 on:
   push:
     tags:
@@ -35,4 +35,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ghcr.io/${{ github.repository }}:${{ steps.vars.outputs.VERSION }}
+          tags: ghcr.io/${{ github.actor }}/app-1:${{ steps.vars.outputs.VERSION }}
